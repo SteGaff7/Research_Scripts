@@ -1,7 +1,23 @@
 #!/bin/bash
 
 projects=(
+        Chart
         Cli
+        Closure
+        Codec
+        Collections
+        Compress
+        Csv
+        Gson
+        JacksonCore
+        JacksonDatabind
+        JacksonXml
+        Jsoup
+        JxPath
+        Lang
+        Math
+        Mockito
+        Time
 )
 # Location of fixed test suites
 dir="/home/people/12309511/mutation_testing/cleaned_test_suites/"

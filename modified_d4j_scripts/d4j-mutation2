@@ -174,13 +174,14 @@ if (defined $TEST_SUITE) {
 	    $mut_result = $project->mutation_analysis_ext($test_dir, "*.java", $log_file, $EXCL, $test);
 	    print "Moving csv files to results directories" . "\n";
 	    my $killMap = "$WORK_DIR/killMap.csv";
-	    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/kill_maps/; mv $killMap /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/kill_maps/${test_class}-${test_method}-killMap.csv");
+	    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$version/kill_maps/; mv $killMap /home/people/12309511/scratch/major_mutation_results/$proj/$version/kill_maps/${version}-${gen}-${seed}-${test_class}-${test_method}-killMap.csv");
 
 	    my $testMap = "$WORK_DIR/testMap.csv";
-            system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/test_maps/; mv $testMap /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/test_maps/${test_class}-${test_method}-testMap.csv");
+	    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$version/test_maps/; mv $testMap /home/people/12309511/scratch/major_mutation_results/$proj/$version/test_maps/${version}-${gen}-${seed}-${test_class}-${test_method}-testMap.csv");
 
 	    my $summary = "$WORK_DIR/summary.csv";
-            system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/summaries/; mv $summary /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/summaries/${test_class}-${test_method}-summary.csv");
+	    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$version/summaries/; mv $summary /home/people/12309511/scratch/major_mutation_results/$proj/$version/summaries/${version}-${gen}-${seed}-${test_class}-${test_method}-summary.csv");
+
 	    } catch {
 		print "Error, redirected to log files" . "\n";
 		system("echo $test >> /home/people/12309511/logs/major_mutation/methods/$proj-$gen-$seed-$version.log");
@@ -191,7 +192,7 @@ if (defined $TEST_SUITE) {
     close $info;
 
     my $mutants_log = "$WORK_DIR/mutants.log";
-    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$gen/$seed/$version/; cp $mutants_log /home/people/12309511/major_mutation_results/$proj/$gen/$seed/$version/");
+    system("mkdir --parents /home/people/12309511/scratch/major_mutation_results/$proj/$version/; cp $mutants_log /home/people/12309511/scratch/major_mutation_results/$proj/$version/");
     
 }
 

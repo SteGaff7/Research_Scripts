@@ -1,0 +1,389 @@
+Checking out 1696 to /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1.. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 1696:1695............................................................. OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Chart-5f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test00
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test00 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test01
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test01 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test02
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test02 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test03
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test03 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test04
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test04 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test05
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test05 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test06
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test06 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test07
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test07 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test08
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test08 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test09
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test09 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test10
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test10 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test11
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test11 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test12
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test12 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test13
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test13 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test14
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test14 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test15
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test15 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test16
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test16 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test17
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test17 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test18
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test18 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test19
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test19 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test20
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test20 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test21
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test21 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test22
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test22 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test23
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test23 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test24
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test24 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test25
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test25 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test26
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test26 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test27
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test27 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test28
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test28 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test29
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test29 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test30
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test30 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test31
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test31 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test32
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test32 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test33
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test33 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test34
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test34 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+Running ant (mutation.test)................................................ org.jfree.data.xy.XYSeries_ESTest::test35
+FAIL
+Executed command:  cd /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 && /home/people/12309511/mutation_testing/defects4j/major/bin/ant -f /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/people/12309511/mutation_testing/defects4j -Dd4j.dir.projects=/home/people/12309511/mutation_testing/defects4j/framework/projects -Dbasedir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1 -Dbuild.compiler=major.ant.MajorCompiler -Dd4j.test.dir=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.test_suite -Dd4j.test.include=*.java -Dmajor.kill.log=/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/kill.csv -logfile /scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/.mutation.log  -Dtest.entry.class=org.jfree.data.xy.XYSeries_ESTest -Dtest.entry.method=test35 mutation.test 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/lib/tools.jar
+Buildfile: /home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml
+Moving csv files to results directories
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/killMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/testMap.csv’: No such file or directory
+mv: cannot stat ‘/scratch/12309511/temp_checkouts/Chart_5f_evosuite_1/summary.csv’: No such file or directory
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+
+BUILD FAILED
+/home/people/12309511/mutation_testing/defects4j/framework/projects/defects4j.build.xml:226: Reference build.classpath not found.
+
+Total time: 0 seconds

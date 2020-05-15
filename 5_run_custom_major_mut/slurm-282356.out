@@ -1,0 +1,21 @@
+Checking out 1065 to /scratch/12309511/temp_checkouts/Chart_10f_evosuite_3. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 1065:1064............................................................. OK
+sh: line 1: 81583 Segmentation fault      (core dumped) git apply -p1 --check /scratch/12309511/temp_checkouts/Chart_10f_evosuite_3/.defects4j.diff 2>&1
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Chart-10f....................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Cannot mutate project! at /home/people/12309511/mutation_testing/defects4j/framework/bin/d4j/d4j-mutation2 line 145.
+Compilation failed in require at /home/people/12309511/mutation_testing/defects4j/framework/bin/defects4j line 164.
