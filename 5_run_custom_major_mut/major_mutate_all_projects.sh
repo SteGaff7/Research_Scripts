@@ -1,9 +1,12 @@
 #!/bin/bash
 
+done_issues=(
+	Chart
+	Cli
+	Closure
+)
+
 projects=(
-        Chart
-        Cli
-        Closure
         Codec
         Collections
         Compress
