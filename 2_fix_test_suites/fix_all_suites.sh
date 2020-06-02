@@ -1,20 +1,22 @@
 #!/bin/bash
 
-all_suites="${HOME}/mutation_testing/cleaned_test_suites/"
+suites="/home/people/12309511/test_suites/fixed_suites"
 
-for file in $(ls "$all_suites"); do
-	if [ -d "$all_suites$file" ] && [ "$file" != "logs" ]; then
-                project_dir="$all_suites$file/"
-                project="$file"
+for project_dir in $suites/*; do
+	pid=$(echo "$project_dir" | rev | cut -d'/' -f1 | rev)
 
-                for generator in $(ls "$project_dir"); do
+	proj_log_dir=/home/people/12309511/logging/2_fix_test_suites/${pid}
+	mkdir -p "${proj_log_dir}"
 
-                	for test_id in $(ls "$project_dir$generator"); do
+	for generator_dir in $project_dir/*; do
+		gen=$(echo "$generator_dir" | rev | cut -d'/' -f1 | rev)
 
-                        	suite_dir="$project_dir$generator/$test_id/"
-	                        sbatch ./nested_fix_suite_SBATCH.sh "$project" "$suite_dir" >> "${HOME}/subset_log.text"
+              	for seed_dir in $generator_dir/*; do
+			seed=$(echo "$seed_dir" | rev | cut -d'/' -f1 | rev)
+
+			job_name=${pid}_${gen}_${seed}
+			sbatch -J ${job_name}_fix -o "/home/people/12309511/scratch/dump.out" -e "${proj_log_dir}/${job_name}.error" SBATCH_fix_test_suites.sh "$pid" "$seed_dir"
                                 
-                	done
                 done
-        fi
+        done
 done
