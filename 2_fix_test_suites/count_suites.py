@@ -2,7 +2,7 @@ import os
 
 # suites_dir = sys.argv[1]
 
-suites_dir = '/home/people/12309511/test_suites/raw_suites'
+suites_dir = '/home/people/12309511/test_suites/fixed_suites'
 
 # Iterate through projects, create nested dictionary
 dicts = {}
@@ -38,10 +38,10 @@ wf = open('/home/people/12309511/logging/1_gen_test_suites/ignore_suites.log', '
 with wf:
     for proj, proj_dict in dicts.items():
         for ver, ver_dict in proj_dict.items():
-            # print(proj + "-" + ver)
-            # print(ver_dict['evosuite'])
-            # print(ver_dict['randoop'])
-            # print(ver_dict['total'])
+            #print(proj + "-" + ver)
+            #print(ver_dict['evosuite'])
+            #print(ver_dict['randoop'])
+            #print(ver_dict['total'])
 
             if ver_dict['total'] < 5:
                 lt_5 += 1

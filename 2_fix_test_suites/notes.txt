@@ -1,1 +1,19 @@
 Manually removed suites < 5 e.g 4 x Closure(88f, 91f, 100f, 156f) before fixing suites
+
+Ran fix all suites with failed suite dirs logged and some suites were cancelled for taking too long.
+Then ran fixed suite per version in these failed Dirs, again logging failed versions.
+
+8 failed
+
+Check how many missing suites between raw and fixed using identify_missing script
+
+16 missing (Closure ones removed were excluded) - missing means backup there but original file not present
+
+Ran fix_missing_scripts for 16 missing. 
+
+Original 8 failed and the x missing failed are all manually removed, also any still missing are noted and a recount of bugs in each category is done given:
+
+0-4:
+5-9:
+10:
+

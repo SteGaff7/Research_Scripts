@@ -1,21 +1,21 @@
 #!/bin/bash -l
-#SBATCH --job-name=run_bug_det_tom_subset
 
 # speficity number of nodes 
 #SBATCH -N 1
 
 # specify number of tasks/cores per node required
-#SBATCH --ntasks-per-node 3
+#SBATCH --ntasks-per-node 1
 
 # specify the walltime e.g 20 mins
 #SBATCH -t 48:00:00
 
 # set to email at start,end and failed jobs
-#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=NONE
 #SBATCH --mail-user=stephen.gaffney@ucdconnect.ie
 
 # run from current directory
 cd $SLURM_SUBMIT_DIR
+
 
 project="$1"
 suite_dir="$2"

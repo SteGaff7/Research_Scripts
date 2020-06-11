@@ -22,4 +22,4 @@ suite_dir=$3
 
 cmd="perl /home/people/12309511/defects4j/framework/util/fix_test_suite.pl -p $pid -v $vid -d $suite_dir -A"
 
-eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/2_fix_test_suites/failed_fix_suites_by_vid.log
+eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/2_fix_test_suites/failed_fix_missing.log

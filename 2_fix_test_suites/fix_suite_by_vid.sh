@@ -22,7 +22,8 @@ while read -r line || [[ -n $line ]]; do
 
 				job_name=${pid}_${vid}_${gen}_${seed}_fix
 				
-				echo "sbatch -J ${job_name} -o "/home/people/12309511/scratch/dump.out" -e ${version_error_file} SBATCH_fix_suite_by_vid.sh $pid $vid $suite_dir"
+				#sbatch -J ${job_name} -o "/home/people/12309511/scratch/dump.out" -e ${version_error_file} SBATCH_fix_suite_by_vid.sh $pid $vid $suite_dir
+				sbatch -J ${job_name} -o "/dev/null" -e ${version_error_file} SBATCH_fix_suite_by_vid.sh $pid $vid $suite_dir
 			fi
 		done
 
