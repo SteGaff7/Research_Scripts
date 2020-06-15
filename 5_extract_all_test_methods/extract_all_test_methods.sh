@@ -21,5 +21,5 @@ projects=(
 )
 
 for str in "${projects[@]}"; do
-        sbatch ./SBATCH_get_project_tests.sh "$str"
+        sbatch -J ${str}_extract_test_methods -o /dev/null -e /dev/null SBATCH_extract_proj_methods.sh "$str"
 done

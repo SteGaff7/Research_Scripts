@@ -16,10 +16,15 @@
 # run from current directory
 cd $SLURM_SUBMIT_DIR
 
-
 project="$1"
 suite_dir="$2"
 gen="$3"
-test_id="$4"
+seed="$4"
+vid="$5"
 
-run_bug_detection_thomas.pl -p "$project" -d "$suite_dir" -o "${HOME}"/triggering_tests/"$project"/"$gen"/"$test_id"/ || echo "$suite_dir" >> ~/temp_failed_logs/failed_run_bug_detection_thomas
+out_dir="/home/people/12309511/triggering_tests/${project}/${gen}/${seed}"
+mkdir -p ${out_dir}
+
+cmd="run_bug_detection_thomas.pl -p ${project} -v ${vid} -d ${suite_dir} -o ${out_dir}/"
+
+eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/3_run_bug_det_thomas/failed_run_bug_by_vid.log

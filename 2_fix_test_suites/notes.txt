@@ -10,10 +10,15 @@ Check how many missing suites between raw and fixed using identify_missing scrip
 16 missing (Closure ones removed were excluded) - missing means backup there but original file not present
 
 Ran fix_missing_scripts for 16 missing. 
+0 failed from missing suites
 
-Original 8 failed and the x missing failed are all manually removed, also any still missing are noted and a recount of bugs in each category is done given:
+8 failed manually removed (see failed_fix_by_vid.log), also any still missing are noted and a recount of bugs in each category is done given:
 
-0-4:
-5-9:
-10:
+Less than 5 suites: 0
+5-10 suites: 187
+10 suites: 644
+Other: 0
+Total: 831
+Valid results
 
+FINISHED THIS STEP

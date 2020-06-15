@@ -55,29 +55,42 @@ write_test_to_file() {
 	echo "${vid}-${gen}-${seed}-${test_name}" >> "/home/people/12309511/triggering_tests/${pid}/${vid}/${pid}-${vid}-triggering_tests"
 }
 
-
+# Location of all triggering tests for each suite
 triggering_tests_dir="/home/people/12309511/triggering_tests"
 
-pid="Cli"
+for proj_dir in $triggering_tests_dir/*; do
+        pid=$(echo "$proj_dir" | rev | cut -d'/' -f1 | rev)
+	
+	#Condtional remove
+	if [ "$pid" = "Chart" ]; then
 
-cli_dir="${triggering_tests_dir}/${pid}"
+	for gen_dir in $proj_dir/*; do
+		gen_str=$(echo "$gen_dir" | rev | cut -d'/' -f1 | rev)
 
-for gen_dir in $cli_dir/*; do
-	gen_str=$(echo "$gen_dir" | rev | cut -d'/' -f1 | rev)
-	#if [ "$gen_str" = "evosuite" ] || [ "$gen_str" = "randoop" ]; then
-	if [ "$gen_str" = "evosuite" ]; then
-		for seed_dir in $gen_dir/*; do
-			seed=$(echo "$seed_dir" | rev | cut -d'/' -f1 | rev)
-			for file_path in $seed_dir/*; do
-				file=$(echo "$file_path" | rev | cut -d'/' -f1 | rev)
-				if [[ $file == ${pid}-*-*.properties ]]; then
-					echo "Working on file-" $file
-					vid=$(echo $file | cut -d'-' -f2)
-					#echo $vid
-					read_properties_file $pid $vid $gen_str $seed $file_path
-				fi
+		# Problem eith randoop atm
+		#if [ "$gen_str" = "evosuite" ] || [ "$gen_str" = "randoop" ]; then
+		if [ "$gen_str" = "evosuite" ]; then
+
+			for seed_dir in $gen_dir/*; do
+				seed=$(echo "$seed_dir" | rev | cut -d'/' -f1 | rev)
+
+				for file_path in $seed_dir/*; do
+					file=$(echo "$file_path" | rev | cut -d'/' -f1 | rev)
+
+					if [[ $file == ${pid}-*-*.properties ]]; then
+						echo "Working on file-" $file
+						vid=$(echo $file | cut -d'-' -f2)
+						
+						# COnditional remove
+						if [ "$vid" = 14f ]; then
+						echo $vid
+						read_properties_file $pid $vid $gen_str $seed $file_path
+						fi
+					fi
+				done
 			done
-		done
+		fi
+	done
 	fi
 done
         

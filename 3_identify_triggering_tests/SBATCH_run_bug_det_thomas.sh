@@ -28,5 +28,4 @@ cmd="run_bug_detection_thomas.pl -p ${project} -d ${suite_dir} -o ${out_dir}/"
 
 echo $cmd
 
-#eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/2_fix_test_suites/failed_fix_suites_by_vid.log
-
+eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/3_run_bug_det_thomas/failed_run_bug.log

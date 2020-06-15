@@ -33,7 +33,7 @@ eq_10 = 0
 other = 0
 total = 0
 
-wf = open('/home/people/12309511/logging/2_fix_test_suites/count.log', 'w')
+wf = open('/home/people/12309511/logging/3_run_bug_det_thomas/count.log', 'w')
 
 with wf:
     for proj, proj_dict in dicts.items():

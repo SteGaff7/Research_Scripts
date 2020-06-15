@@ -1,0 +1,12 @@
+Currently triggering tests for a bug (10 suites of each bug) are split across 10 directories. This step is to bring them all into one directory e.g a directory per bug version.
+
+Current: /home/people/12309511/triggering_tests/Chart/evosuite/1/ multiple *-properties files
+Desired: /home/people/12309511/triggering_tests/Chart/10f 11f 12f etc each with ALL the triggering tests in ONE file
+
+Randoop still generating thousands of triggering tests (24,000 ine 1 suite), error here?
+Just merging evousite for now.
+
+DONT RUN YET, all ready to go. SBATCH it?
+
+Iterate through project names and just SBATCH each project?
+

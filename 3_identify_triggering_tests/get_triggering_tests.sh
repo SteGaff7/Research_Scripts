@@ -17,7 +17,7 @@ for proj_dir in $suite_dir/*; do
 			#sbatch
 			job_name=${pid}_${gen}_${seed}
 
-                        sbatch -J ${job_name}_trigs -o "/home/people/12309511/scratch/dump.out" -e "${proj_log_dir}/${job_name}.error" SBATCH_run_bug_det_thomas.sh "$pid" "$seed_dir" "$gen" "$seed"
+                        sbatch -J ${job_name}_trigs -o /dev/null -e "${proj_log_dir}/${job_name}.error" SBATCH_run_bug_det_thomas.sh "$pid" "$seed_dir" "$gen" "$seed"
                 done
         done
 done

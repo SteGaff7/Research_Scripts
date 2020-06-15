@@ -38,23 +38,23 @@ search_for_tests () {
 	grep "$file" -e "public" | while read -r line; do
 		result=$( echo "$line" | cut -d" " -f3)
 		if [ -n "$result" ] && [[ $result == *"Test"* ]]; then
-			echo "${package}${result}" >> /home/people/12309511/all_tests/${project}/${generator_str}/${int_str}/${version_str}/tests.txt 
+			echo "${package}${result}" >> /home/people/12309511/all_test_methods/${project}/${generator_str}/${int_str}/${version_str}/test_methods.txt 
 		elif [ -n "$result" ] && [[ $result == *"test"* ]]; then
-			echo "${result}" >> /home/people/12309511/all_tests/${project}/${generator_str}/${int_str}/${version_str}/tests.txt
+			echo "${result}" >> /home/people/12309511/all_test_methods/${project}/${generator_str}/${int_str}/${version_str}/test_methods.txt
 		fi
 	done
 }
 
 project="$1"
-project_dir=/home/people/12309511/scratch/test_unzips/${project}
+project_dir=/home/people/12309511/scratch/tmp_unzipped/${project}
 for generator in $project_dir/*; do
         generator_str=$(echo "$generator" | rev | cut -d'/' -f1 | rev)
         for int in $generator/*; do
                 int_str=$(echo "$int" | rev | cut -d'/' -f1 | rev)
-                mkdir -p /home/people/12309511/all_tests/${project}/${generator_str}/${int_str}/
+                mkdir -p /home/people/12309511/all_test_methods/${project}/${generator_str}/${int_str}/
                 for version in $int/*; do
 			version_str=$(echo "$version" | rev | cut -d'/' -f1 | rev) 
-			mkdir -p /home/people/12309511/all_tests/${project}/${generator_str}/${int_str}/${version_str}
+			mkdir -p /home/people/12309511/all_test_methods/${project}/${generator_str}/${int_str}/${version_str}
 			find_java_files_recur "$version" "$project" "$generator_str" "$int_str" "$version_str"
 		done
 	done
