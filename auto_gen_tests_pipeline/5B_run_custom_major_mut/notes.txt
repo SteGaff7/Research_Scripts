@@ -1,0 +1,7 @@
+Mutate only bugs with MIN 1 triggering test suite, maybe use triggering_test/pid for this, e.g all dirs except evosutie and randoop
+
+OR move all valid ones to a new DIR?
+
+SBATCH each suite that is valid
+
+Must update mutation2 and maybe other scripts for file names and locations

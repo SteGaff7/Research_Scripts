@@ -10,9 +10,8 @@ Copy all of the test methods from all of the .java files to a new file "test_met
 Clean up by removing the unzipped file
 
 
+NOTES: 	changed name of dir from all_tests to all_test_methods
+	changed name of tests.txt to test_methods.txt
+	changed name of test_unzips to tmp_unzipped
 
-
-
-NOTES: changed name of dir from all_tests to all_test_methods
-changed name of tests.txt to test_methods.txt
-changed name of test_unzips to tmp_unzipped
+COMPLETE

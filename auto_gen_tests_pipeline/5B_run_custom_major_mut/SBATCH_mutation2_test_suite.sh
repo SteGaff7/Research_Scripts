@@ -1,14 +1,13 @@
 #!/bin/bash -l
-#SBATCH --job-name=major_mutate
 
 # speficity number of nodes 
 #SBATCH -N 1
 
 # specify number of tasks/cores per node required
-#SBATCH --ntasks-per-node 3
+#SBATCH --ntasks-per-node 1
 
 # specify the walltime e.g 20 mins
-#SBATCH -t 72:00:00
+#SBATCH -t 96:00:00
 
 # set to email at start,end and failed jobs
 #SBATCH --mail-type=NONE
