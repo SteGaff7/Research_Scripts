@@ -4,14 +4,15 @@ Checkout fixed version
 Compile
 Run test --> all_tests
 
-Exports tests.trigger --> trigger_methods (New newline though*) --> move to dev/trigs/pid/vid/trigs
+Exports tests.trigger --> trigger_methods (No newline though*, maybe echo one?) --> move to dev/trigs/pid/vid/trigs
 Export tests.relevant --> relevant_classes
 
 Get relevant all_test_methods by intersecting all_tests and relevant_classes
 rel_test_methods --> dev/all_tests/pid/vid/all_test_methods
 
-Run mutation2 on pid vid which will use all test methods individually and ??move files to mut_analysis?
+Run mutation3 on pid vid which will use all test methods individually and ??move files to mut_analysis?
 
 Merge maps etc
+Check triggering
 
-Check triggering 
+Do these steps with the existing merge and check scripts? 

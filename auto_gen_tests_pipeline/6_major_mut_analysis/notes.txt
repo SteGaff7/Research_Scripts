@@ -1,0 +1,21 @@
+Mutate only bugs with MIN 1 triggering test suite
+
+Itearte through all suites in fixed_suites
+If vid is in triggering_tests/project then it is valid
+Log it and SBATCH suite
+
+Log Results:
+Valid bugs - 423 CORRECT
+Invalid bugs - 403 CORRECT
+
+Valid suites - 4013
+Invalid suites - 3628
+
+Updated mutation2 and other scripts for file names and locations
+Log files present and error output for jobs
+
+Jobs - 4013 CORRECT
+
+Valid/Invalid suites is being run multiple times, forgot to check files for duplicates etc
+
+Success log will have JxPath_10f_ev_2 duplicated

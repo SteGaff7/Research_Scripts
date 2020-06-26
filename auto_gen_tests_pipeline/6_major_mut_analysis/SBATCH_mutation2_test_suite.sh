@@ -32,7 +32,7 @@ cd "${tmp_dir}/${project}_${version}_${gen}_${seed}"
 defects4j compile
 
 # Run d4j mutation2
-(defects4j mutation2 -t testClass::testMethod -s /home/people/12309511/mutation_testing/cleaned_test_suites/$project/$gen/$seed/${project}-${version}-${gen}.${seed}.tar.bz2 && echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logs/major_mutation/suites/completed_suites.log ) || echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logs/major_mutation/suites/failed_mutation_suites.log
+(defects4j mutation2 -t testClass::testMethod -s /home/people/12309511/test_suites/fixed_suites/$project/$gen/$seed/${project}-${version}-${gen}.${seed}.tar.bz2 && echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/success_mut_suites.log) || echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/failed_mut_suites.log
 
 # Remove temporary checkout
 rm -rf "${tmp_dir}/${project}_${version}_${gen}_${seed}"
