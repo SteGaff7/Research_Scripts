@@ -19,3 +19,30 @@ Jobs - 4013 CORRECT
 Valid/Invalid suites is being run multiple times, forgot to check files for duplicates etc
 
 Success log will have JxPath_10f_ev_2 duplicated
+
+
+REDO all Chart projects as there was a bug in repo first run
+
+4013 Jobs:
+3103 Success (0 Chart)
+321 Failed (195 Chart)
+589 Timed Out (436 Randoop)
+4013 Total
+
+Re-running Chart suites which should increase Success #
+219 CHart jobs
+
+
+
+Remove failed suites from Major Mutation - DONE
+Remove failed/TO Chart suites - TODO
+Remove failed/TO dev suites - TODO
+
+
+Redo timed out suites, existing maps should be copied over and replaced? - YES
+RUNNING 10 Hours Time Out
+
+589 Jobs - CORRECT
+
+
+

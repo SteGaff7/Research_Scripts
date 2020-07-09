@@ -23,7 +23,7 @@ projects=(
 )
 
 projects_dir="/home/people/12309511/defects4j/framework/projects"
-log_dir="/home/people/12309511/logging/dev_test_pipeline/failed_dev_pipe_err"
+log_dir="/home/people/12309511/logging/dev_test_pipeline/dev_pipeline_err_out"
 
 mkdir --parents ${log_dir}
 
@@ -42,7 +42,7 @@ for project in "${projects[@]}"; do
 			job_name="${project}-${bug_id}-dev-pipeline"
 			log_file="${log_dir}/${project}-${bug_id}.err"
 			# Sbatch
-			echo "sbatch -J $job_name -o /dev/null -e ${log_file} SBATCH_dev_tests.sh $project $bug_id"
+			sbatch -J $job_name -o /dev/null -e ${log_file} SBATCH_dev_tests.sh $project ${bug_id}f
                 done < "$bugs_file"
         fi
 done

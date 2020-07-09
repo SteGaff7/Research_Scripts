@@ -1,3 +1,5 @@
 Had to modify mutation3 as Test can be found in test methods
 
-Good to go when mut finished
+835 submitted jobs
+
+Ran jobs for bugs with no triggering tests so must use valid_bugs file to determine which suites to merge and look at etc

@@ -1,0 +1,13 @@
+Merge kill maps into one map for analysis
+
+Combine dev test methods and auto-gen test methods
+
+Determine which project-versions to use?
+
+Some versions only have dev tests and not much use?
+
+Valid_mut_bugs --> bugs with min 1 suite with t test.
+
+
+
+Only merge bugs/suites that are in the valid_bugs file (and havent failed?? - Maybe search success log for Min 1 matching suite that mutated) 

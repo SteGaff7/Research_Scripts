@@ -3,3 +3,6 @@ Version - 12f
 Test ID - 17
 Mutants - 35, 36, 38
 Uniquely killed
+
+
+EXTRACT dev trigs?
