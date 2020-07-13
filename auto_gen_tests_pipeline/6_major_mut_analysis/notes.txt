@@ -30,13 +30,22 @@ REDO all Chart projects as there was a bug in repo first run
 4013 Total
 
 Re-running Chart suites which should increase Success #
-219 CHart jobs
+219 CHart jobs - FINISHED
+134 success
+10 failed
+75 timeout
+219 total
 
-
+24 already being redone as they were reran from the generic time out script,
+therefore only 51 timeouts re ran for Chart.
+51 jobs running
+Remove 10 failed Chart maps - DONE
 
 Remove failed suites from Major Mutation - DONE
-Remove failed/TO Chart suites - TODO
-Remove failed/TO dev suites - TODO
+Remove failed Chart suites - DONE
+Remove failed dev suites - TODO
+
+Removed failed/TO redo suites (ALL - all, chart, dev)
 
 
 Redo timed out suites, existing maps should be copied over and replaced? - YES

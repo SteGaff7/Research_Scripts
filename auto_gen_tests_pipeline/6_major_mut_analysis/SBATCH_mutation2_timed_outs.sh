@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node 1
 
 # specify the walltime e.g 20 mins
-#SBATCH -t 240:00:00
+#SBATCH -t 192:00:00
 
 # set to email at start,end and failed jobs
 #SBATCH --mail-type=NONE
@@ -34,7 +34,7 @@ cd "${tmp_dir}/${project}_${version}_${gen}_${seed}"
 defects4j compile
 
 # Run d4j mutation2
-(defects4j mutation2 -t testClass::testMethod -s /home/people/12309511/test_suites/fixed_suites/$project/$gen/$seed/${project}-${version}-${gen}.${seed}.tar.bz2 && echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/redo_timed_out_success_mut_suites.log) || echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/redo_timed_out_failed_mut_suites.log
+(defects4j mutation2 -t testClass::testMethod -s /home/people/12309511/test_suites/fixed_suites/$project/$gen/$seed/${project}-${version}-${gen}.${seed}.tar.bz2 && echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/redo_timed_out_CHART_success_mut_suites.log) || echo "${project}-${version}-${gen}.${seed}.tar.bz2" >> /home/people/12309511/logging/6_major_mut_analysis/redo_timed_out_CHART_failed_mut_suites.log
 
 # Remove temporary checkout
 rm -rf "${tmp_dir}/${project}_${version}_${gen}_${seed}"

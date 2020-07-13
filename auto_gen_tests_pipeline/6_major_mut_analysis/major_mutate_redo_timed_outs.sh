@@ -27,5 +27,5 @@ while read -r line; do
                 sbatch -J ${job_name} -o /dev/null -e ${out_dir}/${job_name}.err SBATCH_mutation2_timed_outs.sh $pid $gen $seed $vid
                 
         fi
-done < timed_out_suites.log
+done < timed_out_Chart_suites.log
 

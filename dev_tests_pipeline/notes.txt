@@ -1,5 +1,12 @@
 Had to modify mutation3 as Test can be found in test methods
 
 835 submitted jobs
+656 success
+48 fail
+131 timeout
+835 total
+
+Reran 131 timeout with wall time 10 days
+
 
 Ran jobs for bugs with no triggering tests so must use valid_bugs file to determine which suites to merge and look at etc

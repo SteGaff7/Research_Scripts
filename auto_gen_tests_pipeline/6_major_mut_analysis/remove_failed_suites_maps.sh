@@ -21,4 +21,4 @@ while read -r line; do
 	find $t_map_dir -type f -name "${vid}-${gen}-${seed}-*-*-testMap.csv" -delete
 	find $summ_dir -type f -name "${vid}-${gen}-${seed}-*-*-summary.csv" -delete
 
-done < failed_mut_suites_no_CHART.log
+done < redo_failed_Chart_mut_suites.log
