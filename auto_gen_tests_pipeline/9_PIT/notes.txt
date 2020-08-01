@@ -1,0 +1,8 @@
+Test run on Chart and Jsoup to see how many green suites etc
+Submitted 596 jobs with 50 hours wall time
+
+Only suites with triggering tests ran
+
+Failed checkouts, compiles, pit mutation and moving files will be logged
+
+
