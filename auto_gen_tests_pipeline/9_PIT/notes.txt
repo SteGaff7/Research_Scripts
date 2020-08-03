@@ -7,3 +7,11 @@ Failed checkouts, compiles, pit mutation and moving files will be logged
 
 Moved successfully represents the suites that worked
 
+1297 jobs submitted
+
+
+REDO:
+
+1516 jobs submitted
+No Collections
+Up to and including Gson

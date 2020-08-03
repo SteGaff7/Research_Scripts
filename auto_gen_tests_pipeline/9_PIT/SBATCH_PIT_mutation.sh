@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node 1
 
 # specify the walltime e.g 20 mins
-#SBATCH -t 50:00:00
+#SBATCH -t 120:00:00
 
 # set to email at start,end and failed jobs
 #SBATCH --mail-type=NONE
@@ -37,15 +37,16 @@ cd "${tmp_dir}/${project}_${version}_${gen}_${seed}"
 defects4j compile || echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/failed_compiles"
 
 # Run PIT
-((run_pit.pl -p ${project} -o . -d ${suites} -v ${version}) && echo "${project}-${version}-${gen}-${seed}" >> ${log_dir}/success_pit_suites.log) || echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/failed_pit_suites.log"
+(run_pit.pl -p ${project} -o . -d ${suites} -v ${version}) || echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/failed_pit_suites.log"
 
 # If mutations file exists (PIT worked)
 if [ -f "mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" ]; then
+
 	# Make output directories
 	mkdir -p ${out_dir}/${project}/${version}
 
 	# Move matrix
-	(cd mutation_log/${project}/${gen} && mv "${version}-${seed}-pitReports/mutations.xml" ${out_dir}/${project}/${version} && echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/moved_okay.log") || echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/not_moved.err"
+	(cd mutation_log/${project}/${gen} && mv "${version}-${seed}-pitReports/mutations.xml" "${out_dir}/${project}/${version}/${version}-${gen}-${seed}-mutations.xml" && echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/success_pit_suites.log") || echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/not_moved.err"
 
 else
 	# No mutation file means error?
@@ -54,9 +55,6 @@ else
 		echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/failed_pit_suites.log"
 	fi
 fi
-
-# Make output directories
-mkdir -p ${out_dir}/${project}/${version}
 
 # Remove temporary checkout
 rm -rf "${tmp_dir}/${project}_${version}_${gen}_${seed}"

@@ -2,7 +2,12 @@
 
 projects=(
 	Chart
-	Jsoup
+	Cli
+	Closure
+	Codec
+ 	Compress
+	Csv	
+	Gson
 )
 
 # Location of fixed test suites
