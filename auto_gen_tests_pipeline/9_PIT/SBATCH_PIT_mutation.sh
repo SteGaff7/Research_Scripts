@@ -37,7 +37,7 @@ cd "${tmp_dir}/${project}_${version}_${gen}_${seed}"
 defects4j compile || echo "${project}_${version}_${gen}_${seed}" >> "${log_dir}/failed_compiles"
 
 # Run PIT
-((run_pit.pl -p ${project} -o . -d ${suites} -v ${version}) && echo "${project}-${version}-${gen}-${seed}" >> ${log_dir}/success_pit_suites.log) || echo "${project}-${version}-${gen}-${seed}" >> ${log_dir}/failed_pit_suites.log
+((run_pit.pl -p ${project} -o . -d ${suites} -v ${version}) && echo "${project}-${version}-${gen}-${seed}" >> ${log_dir}/success_pit_suites.log) || echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/failed_pit_suites.log"
 
 # If mutations file exists (PIT worked)
 if [ -f "mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" ]; then
@@ -49,7 +49,10 @@ if [ -f "mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.
 
 else
 	# No mutation file means error?
-	echo "${project}-${version}-${gen}-${seed}" >> ${log_dir}/failed_pit_suites.log
+	# Avoid duplicates in error file
+	if ! grep -Fxq "${project}-${version}-${gen}-${seed}" "${log_dir}/failed_pit_suites.log"; then
+		echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/failed_pit_suites.log"
+	fi
 fi
 
 # Make output directories
