@@ -7,6 +7,10 @@ Had to modify mutation3 as Test can be found in test methods
 835 total
 
 Reran 131 timeout with wall time 10 days
-
+19 success
+105 failed
+7 timeout
 
 Ran jobs for bugs with no triggering tests so must use valid_bugs file to determine which suites to merge and look at etc
+
+Removed all maps of failing and double timed out suites

@@ -3,9 +3,9 @@
 while read -r line; do
 	echo $line
 	pid=$(echo $line | cut -d"-" -f1)
-	vid=$(echo $line | cut -d"-" -f2)
-	gen=$(echo $line | cut -d"-" -f3 | cut -d"." -f1)
-	seed=$(echo $line | cut -d"-" -f3 | cut -d"." -f2)
+	gen=$(echo $line | cut -d"-" -f2)
+	seed=$(echo $line | cut -d"-" -f3)
+	vid=$(echo $line | cut -d"-" -f4)
 
 	major_dir=/home/people/12309511/scratch/major_mutation_results
 	
@@ -17,8 +17,8 @@ while read -r line; do
 	summ_dir="${bug_dir}/summaries"
 
 	# Use find command with -delete option
-	find $k_map_dir -type f -name "${vid}-${gen}-${seed}-*-*-killMap.csv" -delete
+	find $k_map_dir -type f -name "${vid}-${gen}-${seed}-*-*-killMap.csv"  -delete
 	find $t_map_dir -type f -name "${vid}-${gen}-${seed}-*-*-testMap.csv" -delete
 	find $summ_dir -type f -name "${vid}-${gen}-${seed}-*-*-summary.csv" -delete
 
-done < redo_failed_Chart_mut_suites.log
+done < remove_maps.log

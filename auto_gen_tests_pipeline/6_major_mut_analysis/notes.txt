@@ -39,12 +39,12 @@ Re-running Chart suites which should increase Success #
 24 already being redone as they were reran from the generic time out script,
 therefore only 51 timeouts re ran for Chart.
 51 jobs running
-Remove 10 failed Chart maps - DONE
 
+Remove 10 failed Chart maps - DONE
 Remove failed suites from Major Mutation - DONE
 Remove failed Chart suites - DONE
-Remove failed dev suites - TODO
 
+Remove failed dev suites - TODO
 Removed failed/TO redo suites (ALL - all, chart, dev)
 
 
@@ -52,6 +52,14 @@ Redo timed out suites, existing maps should be copied over and replaced? - YES
 RUNNING 10 Hours Time Out
 
 589 Jobs - CORRECT
+640 Rerun timeouts (including 51 Chart re runs) FINISHED
+324 Success
+313 Timeout
+3 Cancelled
 
+Dev 131 Reruns
+19 Success
+7 Timeout
+105 Failed
 
-
+All failed and timed out suites have their maps now deleted
