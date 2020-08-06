@@ -31,7 +31,7 @@ num_mutants=$(tail -n1 ${major_dir}/mutants.log | cut -d':' -f1)
 #num_mutants=$(cat ${major_dir}/mutants.log | wc -l)
 
 # Set up merged map
-echo "Mutant ID; Killing tests" >> ${merged_map}
+echo "Mutant ID, Killing tests" >> ${merged_map}
 for (( i = 1; i <= $num_mutants; i++ )); do
 	echo "${i}," >> ${merged_map}
 done
@@ -42,6 +42,22 @@ for file in ${major_dir}/kill_maps/*; do
 
 		test_name=$(echo "$file" | rev | cut -d'/' -f1 | rev)
 		test_name=${test_name%-killMap.csv}
+
+		# Change test name
+		if [[ $test_name == *-dev-dev-* ]]; then
+			# Dev test
+			test_class=$(echo $test_name | cut -d'-' --output-delimiter='-' -f1-4)
+			test_method=$(echo $test_name | cut -d'-' -f5)
+			test_name=${test_class}::${test_method}
+		else
+			# Non-dev test
+			test_class=$(echo $test_name | cut -d'-' --output-delimiter='-' -f1-4)
+			test_method=$(echo $test_name | cut -d'-' -f5)
+			test_name=${test_class}.${test_method}
+		fi
+
+
+
 
 		# Read kill map, skipping header
 		sed -e 1d $file | while read -r line; do

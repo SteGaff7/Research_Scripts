@@ -12,5 +12,6 @@ Check space before runnning scripts
 
 Scratch merged maps dir
 
-409 jobs submitted
+409 jobs submitted - merge_major_maps_fixed - 2020-08-06
+
 Delete log files after

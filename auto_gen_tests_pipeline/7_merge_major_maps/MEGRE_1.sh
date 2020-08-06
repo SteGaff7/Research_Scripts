@@ -15,7 +15,7 @@ num_mutants=$(tail -n1 ${major_dir}/mutants.log | cut -d':' -f1)
 #num_mutants=$(cat ${major_dir}/mutants.log | wc -l)
 
 # Set up merged map
-echo "Mutant ID; Killing tests" >> ${merged_map}
+echo "Mutant ID, Killing tests" >> ${merged_map}
 for (( i = 1; i <= $num_mutants; i++ )); do
 	echo "${i}," >> ${merged_map}
 done
