@@ -12,6 +12,15 @@ Check space before runnning scripts
 
 Scratch merged maps dir
 
-409 jobs submitted - merge_major_maps_fixed - 2020-08-06
+409 jobs submitted - merge_major_maps_fixed - 2020-08-06 48 hours wall time
+352 - Success
+57 - Timeout
 
-Delete log files after
+Decided to redo with each map having its own directory in case sed pipes conflict, also redid with 110 walltime.
+
+409 submitted - 2020-08-10
+384 - COMPLETED
+25 - TIMEOUT
+
+Removed the 25 timeouts using the log file
+Reran these with wall time of 10 days. A lot of suites ended on Randoop-4 so will probably only need an extra day or two

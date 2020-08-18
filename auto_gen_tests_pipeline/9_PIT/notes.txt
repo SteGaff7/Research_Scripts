@@ -1,17 +1,27 @@
-Test run on Chart and Jsoup to see how many green suites etc
-Submitted 596 jobs with 50 hours wall time
-
 Only suites with triggering tests ran
 
 Failed checkouts, compiles, pit mutation and moving files will be logged
 
 Moved successfully represents the suites that worked
 
-1297 jobs submitted
-
-
-REDO:
-
+Rd.1:
 1516 jobs submitted
 No Collections
 Up to and including Gson
+
+766 Completed
+750 Failed (some project compile errors)
+
+Rd.2:
+1516 jobs submitted
+Didnt work well
+
+
+Rd.3:
+
+Do each project individually so we dont run out of room on /tmp dir
+Chart PIT 1.5.2:
+219 Jobs
+
+Chart PIT 1.4.6:
+219 Jobs

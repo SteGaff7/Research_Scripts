@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node 1
 
 # specify the walltime e.g 20 mins
-#SBATCH -t 48:00:00
+#SBATCH -t 240:00:00
 
 # set to email at start,end and failed jobs
 #SBATCH --mail-type=NONE
@@ -20,7 +20,7 @@ pid=$1
 vid=$2
 
 major_dir="/home/people/12309511/scratch/major_mutation_results/${pid}/${vid}"
-out_dir="/home/people/12309511/scratch/merged_major_maps/${pid}"
+out_dir="/home/people/12309511/scratch/merged_major_maps/${pid}/${vid}"
 merged_map="${out_dir}/${pid}-${vid}-mergedMap.csv"
 
 mkdir -p ${out_dir}
