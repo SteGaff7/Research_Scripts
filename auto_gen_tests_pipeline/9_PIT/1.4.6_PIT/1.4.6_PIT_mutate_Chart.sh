@@ -8,7 +8,7 @@ projects=(
 dir="/home/people/12309511/test_suites/fixed_suites"
 
 #log_dir="/home/people/12309511/logging/9_PIT_mut_analysis"
-log_dir="/home/people/12309511/scratch/tmp_logging/9_PIT_mut_analysis"
+log_dir="/home/people/12309511/scratch/tmp_logging/1.4.6_pit_logging"
 
 # Iterate through all fixed test suites
 for pid in "${projects[@]}"; do
@@ -48,11 +48,11 @@ for pid in "${projects[@]}"; do
 						# Make directory for logging outputs
                                                 mkdir --parents ${log_dir}/${pid}
 
-                                                job_name=${pid}-${gen}-${seed}-${vid}-PIT-mutation-test2
+                                                job_name="${pid}-${gen}-${seed}-${vid}-PIT-mutation-1.4.6-test"
                                                 out_dir=${log_dir}/${pid}
 
                                                 # Run mut HERE
-                                                sbatch -J ${job_name} -o ${out_dir}/${job_name}.err -e ${out_dir}/${job_name}.err FIX_SBATCH_PIT_mutation.sh $pid $gen $seed $vid
+                                                sbatch -J ${job_name} -o /dev/null -e ${out_dir}/${job_name}.err 1.4.6_SBATCH_PIT_mutation.sh $pid $gen $seed $vid
                                         else
 						invalid_suites_log=${log_dir}/invalid_mut_suites.log
                                                 echo ${pid}-${gen}-${seed}-${vid} >> ${invalid_suites_log}

@@ -22,6 +22,17 @@ Rd.3:
 Do each project individually so we dont run out of room on /tmp dir
 Chart PIT 1.5.2:
 219 Jobs
+7 running (broken)
+146 Success
+66 Failed
 
 Chart PIT 1.4.6:
 219 Jobs
+147 Success
+72 Failed (Some of these were memory errors)
+
+I think I will run them with V1.5.2 per project
+
+Proper Run:
+219 Jobs (better logging and tmp folder in scratch)
+
