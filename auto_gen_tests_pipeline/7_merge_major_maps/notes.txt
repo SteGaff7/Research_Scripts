@@ -24,3 +24,5 @@ Decided to redo with each map having its own directory in case sed pipes conflic
 
 Removed the 25 timeouts using the log file
 Reran these with wall time of 10 days. A lot of suites ended on Randoop-4 so will probably only need an extra day or two
+
+19 Still times out, wrote to log file, manually remove and remerge maybe?

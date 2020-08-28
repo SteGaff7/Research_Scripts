@@ -16,7 +16,6 @@ Rd.2:
 1516 jobs submitted
 Didnt work well
 
-
 Rd.3:
 
 Do each project individually so we dont run out of room on /tmp dir
@@ -33,6 +32,12 @@ Chart PIT 1.4.6:
 
 I think I will run them with V1.5.2 per project
 
-Proper Run:
+Final Chart Run (v 1.5.2):
+Git error fixed
 219 Jobs (better logging and tmp folder in scratch)
 
+
+
+
+
+3794 + 219 = 4013 jobs total

@@ -26,14 +26,19 @@ mkdir --parents $log_dir
 suites="/home/people/12309511/test_suites/fixed_suites/${project}/${gen}/${seed}"
 out_dir="/home/people/12309511/scratch/pit_mutation_results"
 tmp_out="/home/people/12309511/scratch/tmp_out"
-tmp="/home/people/12309511/scratch/pit_tmp"
+
+# Make tmp dir for checkout etc
+tmp_dir="/home/people/12309511/scratch/pit_tmp/${project}-${gen}-${seed}-${version}"
+tmp=$(mktemp -d ${tmp_dir}.XXXXXXXXXX)
+
 # Make temporary out directory for mutations.xml file before moving it
 out="${tmp_out}/${project}-${gen}-${seed}-${version}"
 mkdir --parents $out
 
 
 # Run PIT
-(run_pit.pl -t ${tmp} -p ${project} -o ${out} -d ${suites} -v ${version}) || echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/${project}_failed_pit_suites.log"
+(run_pit.pl -t "${tmp}" -p ${project} -o ${out} -d ${suites} -v ${version}) || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_failed_pit_suites.log"
+
 
 # If mutations file exists (PIT worked)
 if [ -f "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" ]; then
@@ -42,15 +47,16 @@ if [ -f "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mut
 	mkdir -p ${out_dir}/${project}/${version}
 
 	# Move matrix
-	(mv "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" "${out_dir}/${project}/${version}/${version}-${gen}-${seed}-mutations.xml" && echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/${project}_success_pit_suites.log") || echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/${project}_not_moved.err"
+	(mv "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" "${out_dir}/${project}/${version}/${version}-${gen}-${seed}-mutations.xml" && echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_success_pit_suites.log") || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_not_moved.err"
 
 else
 	# No mutation file means error?
 	# Avoid duplicates in error file
-	if ! grep -Fxq "${project}-${version}-${gen}-${seed}" "${log_dir}/${project}_failed_pit_suites.log"; then
-		echo "${project}-${version}-${gen}-${seed}" >> "${log_dir}/${project}_failed_pit_suites.log"
+	if ! grep -Fxq "${project}-${gen}-${seed}-${version}" "${log_dir}/${project}_failed_pit_suites.log"; then
+		echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_failed_pit_suites.log"
 	fi
 fi
 
-# Remove temporary checkout
+# Remove temporary dirs
 rm -rf "${out}"
+rm -rf "${tmp}"

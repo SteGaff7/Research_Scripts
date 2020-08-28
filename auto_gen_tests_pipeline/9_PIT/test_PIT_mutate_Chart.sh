@@ -12,9 +12,9 @@ dir="/home/people/12309511/test_suites/fixed_suites"
 
 # Iterate through all fixed test suites
 for pid in "${projects[@]}"; do
-	log_dir="/home/people/12309511/logging/9_PIT_mut_analysis/${pid}"
+	log_dir="/home/people/12309511/scratch/test_logging/${pid}"
 	mkdir --parents $log_dir
-	tmp_log_dir="/home/people/12309511/scratch/tmp_logging/9_PIT_mut_analysis/${pid}"
+	tmp_log_dir="/home/people/12309511/scratch/test_logging/${pid}/outputs"
 	mkdir --parents $tmp_log_dir
         project_dir="${dir}/${pid}"
 
@@ -49,10 +49,10 @@ for pid in "${projects[@]}"; do
                                                         echo ${pid}-${vid} >> "$valid_bugs_log"       
                                                 fi
 
-                                                job_name="${pid}-${gen}-${seed}-${vid}-PIT-mutation-1.5.2"
+                                                job_name="${pid}-${gen}-${seed}-${vid}-test-PIT-mutation-1.5.2"
 
                                                 # Run mut HERE
-                                                sbatch -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out SBATCH_1.5.2_PIT_mutation.sh $pid $gen $seed $vid
+                                                sbatch -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out test_SBATCH.sh $pid $gen $seed $vid
                                         else
 						invalid_suites_log=${log_dir}/${pid}_invalid_mut_suites.log
                                                 echo ${pid}-${gen}-${seed}-${vid} >> ${invalid_suites_log}
