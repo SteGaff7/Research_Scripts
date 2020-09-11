@@ -54,7 +54,7 @@ TRIGGERING_TEST_FILE = "/home/people/12309511/triggering_tests/" + PID + "/" + V
 DEV_TRIGGERING_TEST_FILE = "/home/people/12309511/dev_triggering_tests/" + PID + "/" + VID + "/" + PID + "-" + VID + "-triggering_tests"
 
 # Identify map file
-MAP_FILE = "/home/people/12309511/scratch/merged_major_maps/" + PID + "/" + PID + "-" + VID + "-mergedMap.csv"
+MAP_FILE = "/home/people/12309511/scratch/merged_major_maps/" + PID + "/" + VID + "/" + PID + "-" + VID + "-mergedMap.csv"
 
 # File to write exclusive mutants
 EXCLUSIVE = "/home/people/12309511/mutation_analysis/major/" + PID + "/" + VID + "/exclusive"

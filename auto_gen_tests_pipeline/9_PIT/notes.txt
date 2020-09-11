@@ -41,3 +41,13 @@ Git error fixed
 
 
 3794 + 219 = 4013 jobs total
+
+
+Rerun after loading jdk module to see if it makes a difference?
+Didnt run Chart
+3794 jobs
+
+PROPER RUN - 2020-09-03 17:00
+4013 Jobs
+
+87 Timed Out (6 days)

@@ -11,5 +11,5 @@ while read -r line; do
 	#rm -f ${partial_map}
 	rm -rf ${partial_dir}
 
-done < timeout_merges.log
+done < "FILE"
 

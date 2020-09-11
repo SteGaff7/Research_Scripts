@@ -17,13 +17,13 @@
 cd $SLURM_SUBMIT_DIR
 
 project="$1"
-gen="$2"
-seed="$3"
-version="$4"
+gen="dev"
+seed="dev"
+version="$2"
 
-log_dir="/home/people/12309511/logging/9_PIT_mut_analysis/${project}"
+log_dir="/home/people/12309511/logging/PIT_dev"
 mkdir --parents $log_dir
-suites="/home/people/12309511/test_suites/fixed_suites/${project}/${gen}/${seed}"
+
 out_dir="/home/people/12309511/scratch/pit_mutation_results"
 tmp_out="/home/people/12309511/scratch/tmp_out"
 
@@ -37,7 +37,7 @@ mkdir --parents $out
 
 
 # Run PIT
-(run_pit.pl -t "${tmp}" -p ${project} -o ${out} -d ${suites} -v ${version}) || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_failed_pit_suites.log"
+(run_pit_dev.pl -t "${tmp}" -p ${project} -o ${out} -v ${version}) || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/failed_dev_pit_suites.log"
 
 
 # If mutations file exists and not empty (PIT worked)
@@ -47,13 +47,13 @@ if [ -s "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mut
 	mkdir -p ${out_dir}/${project}/${version}
 
 	# Move matrix
-	(mv "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" "${out_dir}/${project}/${version}/${version}-${gen}-${seed}-mutations.xml" && echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_success_pit_suites.log") || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_not_moved.err"
+	(mv "${out}/mutation_log/${project}/${gen}/${version}-${seed}-pitReports/mutations.xml" "${out_dir}/${project}/${version}/${version}-${gen}-${seed}-mutations.xml" && echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/success_dev_pit_suites.log") || echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/not_moved_dev.err"
 
 else
 	# No mutation file means error?
 	# Avoid duplicates in error file
-	if ! grep -Fxq "${project}-${gen}-${seed}-${version}" "${log_dir}/${project}_failed_pit_suites.log"; then
-		echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/${project}_failed_pit_suites.log"
+	if ! grep -Fxq "${project}-${gen}-${seed}-${version}" "${log_dir}/failed_dev_pit_suites.log"; then
+		echo "${project}-${gen}-${seed}-${version}" >> "${log_dir}/failed_dev_pit_suites.log"
 	fi
 fi
 
