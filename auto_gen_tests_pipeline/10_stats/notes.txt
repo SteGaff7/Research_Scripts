@@ -30,4 +30,15 @@ Two directores:
 5+ bugs with bug-suite file
 4+ bugs with bug-suite file
 
+
+
+Including Dev test suites:
+Bugs with 5+ suites in common:
+Total bugs: 337 (Up 22 due to dev suites inclusion)
+Total suites: 2828
+
+Bugs with 4+ suites in common:
+Total bugs: 359 (Up 17 due to dev suites inclusion)
+Total suites: 2916
+
 Merge these depending on whether we will use 4+ or 5+ suites

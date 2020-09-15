@@ -22,12 +22,14 @@ for file_path in $major/*; do
 	
 		if (( count >= 5 )); then
 			echo "${output}" > "${dir5}/${pid}-${vid}-suites"
-			total=$((total+1))
-			total_suites=$((total_suites + count))
+			#total=$((total+1))
+			#total_suites=$((total_suites + count))
 		fi
 
 		if (( count >= 4 )); then
                         echo "${output}" > "${dir4}/${pid}-${vid}-suites"
+			total=$((total+1))
+                        total_suites=$((total_suites + count))
                 fi
 
 	fi
