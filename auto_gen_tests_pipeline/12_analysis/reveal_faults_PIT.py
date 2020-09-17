@@ -94,7 +94,7 @@ with f_PIT_map, f_PIT_REVEALING, f_PIT_NON_REVEALING, f_PIT_NO_COVERAGE, f_PIT_S
     f_PIT_STATISTICS.write("Non-Revealing," + str(non_revealing_mutants) + "\n")
     f_PIT_STATISTICS.write("No Coverage," + str(no_coverage_mutants) + "\n")
 
-    print("MAJOR STATISTICS")
+    print("PIT STATISTICS")
     print("Total Mutants:", total_mutants)
     print("Revealing:", revealing_mutants)
     print("Non-Revealing:", non_revealing_mutants)

@@ -31,7 +31,7 @@ def revealing_mutant(row):
 PID = sys.argv[1]
 VID = sys.argv[2]
 
-# Identify MAJOR map file, PIT map file, triggering test file, dev triggering test file e.g triggering_tests/Cli/10f/Cli-10f-triggering_tests
+# Identify MAJOR map file, triggering test file, dev triggering test file e.g triggering_tests/Cli/10f/Cli-10f-triggering_tests
 MAJOR_MAP_FILE = "/home/people/12309511/scratch/MAJOR_valid_maps/" + PID + "/" + VID + "/" + PID + "-" + VID + "-mergedMap.csv"
 TRIGGERING_TEST_FILE = "/home/people/12309511/triggering_tests/" + PID + "/" + VID + "/" + PID + "-" + VID + "-triggering_tests"
 DEV_TRIGGERING_TEST_FILE = "/home/people/12309511/dev_triggering_tests/" + PID + "/" + VID + "/" + PID + "-" + VID + "-triggering_tests"
