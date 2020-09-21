@@ -25,8 +25,7 @@ def triggering_test(test):
 
 def revealing_mutant(row):
 
-    # Don't account for empty col after last ',' hence length - 1
-    for i in range(1, len(row) - 1, 1):
+    for i in range(1, len(row), 1):
         test = row[i]
 
         # Check if triggering
@@ -40,7 +39,7 @@ PID = sys.argv[1]
 VID = sys.argv[2]
 
 # Identify PIT map file, triggering test file, dev triggering test file e.g triggering_tests/Cli/10f/Cli-10f-triggering_tests
-PIT_MAP_FILE = "/home/people/12309511/scratch/PIT_valid_maps/" + PID + "/" + VID + "/" + PID + "-" + VID + "-PITmerged.xml"
+PIT_MAP_FILE = "/home/people/12309511/scratch/PIT_valid_maps/" + PID + "/" + VID + "/" + PID + "-" + VID + "-PITmerged.csv"
 TRIGGERING_TEST_FILE = "/home/people/12309511/triggering_tests/" + PID + "/" + VID + "/" + PID + "-" + VID + "-triggering_tests"
 DEV_TRIGGERING_TEST_FILE = "/home/people/12309511/dev_triggering_tests/" + PID + "/" + VID + "/" + PID + "-" + VID + "-triggering_tests"
 
@@ -69,13 +68,14 @@ with f_PIT_map, f_PIT_REVEALING, f_PIT_NON_REVEALING, f_PIT_NO_COVERAGE, f_PIT_S
     # Iterate mutants in map
     for mutant in PIT_map_reader:
 
-        if len(mutant) < 2:
+        # Empty row - Shouldn't happen
+        if len(mutant) < 1:
             continue
 
         mut_id = mutant[0]
         total_mutants += 1
 
-        if len(mutant) == 2:
+        if len(mutant) == 1:
             # No killing tests
             no_coverage_mutants += 1
             f_PIT_NO_COVERAGE.write(mut_id + "\n")
