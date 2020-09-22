@@ -30,7 +30,7 @@ def revealing_mutant(row):
 def get_mutant_name(mutant_id):
     fh = open(MAJOR_MUTANT_FILE)
     for line_number, line in enumerate(fh):
-        if line_number == int(mutant_id):
+        if line_number + 1 == int(mutant_id):
             return line
     return ""
 
