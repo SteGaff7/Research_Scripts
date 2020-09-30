@@ -12,7 +12,7 @@ projects = "/home/people/12309511/defects4j/framework/projects"
 with f_valid_bugs, f_dist_report:
     report_writer = csv.writer(f_dist_report)
 
-    header = ["Bug-ID", "Mutation Tool", "Revealing/Non-Revealing", "Mutation ID", "Distance"]
+    header = ["Bug-ID", "Mutation Tool", "Revealing", "Mutation ID", "Distance"]
     report_writer.writerow(header)
 
     for line in f_valid_bugs:
@@ -64,7 +64,7 @@ with f_valid_bugs, f_dist_report:
             except ValueError:
                 distance = None
 
-            rows.append([PID + "-" + VID, "Major", "Revealing", mut_id, distance])
+            rows.append([PID + "-" + VID, "Major", True, mut_id, distance])
             # print("R - Distance is", str(distance))
 
         major_non_reveal = major_dir + "/" + PID + "/" + VID + "/non_revealing_mutants_MAJOR"
@@ -90,7 +90,7 @@ with f_valid_bugs, f_dist_report:
             except ValueError:
                 distance = None
 
-            rows.append([PID + "-" + VID, "Major", "Non-Revealing", mut_id, distance])
+            rows.append([PID + "-" + VID, "Major", False, mut_id, distance])
             # print("Non-R - Distance is", str(distance))
 
         # Write MAJOR
@@ -124,7 +124,7 @@ with f_valid_bugs, f_dist_report:
             except ValueError:
                 distance = None
 
-            rows.append([PID + "-" + VID, "PIT", "Revealing", str(mut_id), distance])
+            rows.append([PID + "-" + VID, "PIT", True, str(mut_id), distance])
             # print("R - Distance is", str(distance))
 
         pit_non_reveal = pit_dir + "/" + PID + "/" + VID + "/non_revealing_mutants_PIT"
@@ -152,7 +152,7 @@ with f_valid_bugs, f_dist_report:
             except ValueError:
                 distance = None
 
-            rows.append([PID + "-" + VID, "PIT", "Non-Revealing", str(mut_id), distance])
+            rows.append([PID + "-" + VID, "PIT", False, str(mut_id), distance])
             # print("Non-R - Distance is", str(distance))
 
         report_writer.writerows(rows)
