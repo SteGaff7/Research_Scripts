@@ -124,57 +124,71 @@ with f_valid_bugs, f_dist_report:
         pit_reveal = pit_dir + "/" + PID + "/" + VID + "/revealing_mutants_PIT"
         f_pit_reveal = open(pit_reveal, "r")
 
+        obsolete_PIT_mutants = ["Math", "ConditionalsBoundary", "NegateConditionals"]
+
         for row in f_pit_reveal:
+            s = row.split(".")
+            mut_op = s[len(s) - 1].split("-")[0]
+
             mut_id = row
             mut_id = mut_id.rstrip()
             mut_id = mut_id.strip('"')
             line_number = row.split("-")[2]
             # print(mut_id, line_number)
 
-            try:
-                distance = 10000000
-                for t in patch_block_tuples:
-                    if int(t[0]) <= int(line_number) <= int(t[1]):
-                        distance = 0
-                        break
-                    else:
-                        dist_start = abs(int(t[0]) - int(line_number))
-                        dist_end = abs(int(t[1]) - int(line_number))
-                        closest = min(dist_start, dist_end)
-                        distance = min(distance, closest)
+            if any(x in mut_op for x in obsolete_PIT_mutants):
+                continue
+            else:
+                try:
+                    distance = 10000000
+                    for t in patch_block_tuples:
+                        if int(t[0]) <= int(line_number) <= int(t[1]):
+                            distance = 0
+                            break
+                        else:
+                            dist_start = abs(int(t[0]) - int(line_number))
+                            dist_end = abs(int(t[1]) - int(line_number))
+                            closest = min(dist_start, dist_end)
+                            distance = min(distance, closest)
 
-            except ValueError:
-                distance = None
+                except ValueError:
+                    distance = None
 
-            rows.append([PID + "-" + VID, "PIT", True, str(mut_id), distance])
-            # print("R - Distance is", str(distance))
+                rows.append([PID + "-" + VID, "PIT", True, str(mut_id), distance])
+                # print("R - Distance is", str(distance))
 
         pit_non_reveal = pit_dir + "/" + PID + "/" + VID + "/non_revealing_mutants_PIT"
         f_pit_non_reveal = open(pit_non_reveal, "r")
 
         for row in f_pit_non_reveal:
+            s = row.split(".")
+            mut_op = s[len(s) - 1].split("-")[0]
+
             mut_id = row
             mut_id = mut_id.rstrip()
             mut_id = mut_id.strip('"')
             line_number = row.split("-")[2]
             # print(mut_id, line_number)
 
-            try:
-                distance = 10000000
-                for t in patch_block_tuples:
-                    if int(t[0]) <= int(line_number) <= int(t[1]):
-                        distance = 0
-                        break
-                    else:
-                        dist_start = abs(int(t[0]) - int(line_number))
-                        dist_end = abs(int(t[1]) - int(line_number))
-                        closest = min(dist_start, dist_end)
-                        distance = min(distance, closest)
+            if any(x in mut_op for x in obsolete_PIT_mutants):
+                continue
+            else:
+                try:
+                    distance = 10000000
+                    for t in patch_block_tuples:
+                        if int(t[0]) <= int(line_number) <= int(t[1]):
+                            distance = 0
+                            break
+                        else:
+                            dist_start = abs(int(t[0]) - int(line_number))
+                            dist_end = abs(int(t[1]) - int(line_number))
+                            closest = min(dist_start, dist_end)
+                            distance = min(distance, closest)
 
-            except ValueError:
-                distance = None
+                except ValueError:
+                    distance = None
 
-            rows.append([PID + "-" + VID, "PIT", False, str(mut_id), distance])
-            # print("Non-R - Distance is", str(distance))
+                rows.append([PID + "-" + VID, "PIT", False, str(mut_id), distance])
+                # print("Non-R - Distance is", str(distance))
 
         report_writer.writerows(rows)
