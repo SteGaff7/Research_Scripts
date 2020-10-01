@@ -12,10 +12,21 @@ pit_dir = "/home/people/12309511/mutation_analysis/pit"
 
 MAJOR_MUTANT_OPS = ["AOR", "LOR", "COR", "ROR", "SOR", "ORU", "EVR", "LVR", "STD"]
 
-PIT_MUTANT_OPS = ["ConditionalsBoundary", "Increments", "InvertNegs", "Math", "NegateConditionals", "ReturnVals",
-                  "VoidMethodCall", "EmptyReturns", "FalseReturns", "TrueReturns", "NullReturns", "PrimitiveReturns",
-                  "ConstructorCall", "InlineConstant", "NonVoidMethodCall", "RemoveConditional", "ABS", "AOR", "AOD",
-                  "CRCR", "OBBN", "ROR", "UOI", "BooleanTrueReturnVals", "BooleanFalseReturnVals", "ArgumentPropagation",
+# Removed these non existent mutators
+# EmptyReturns
+# FalseReturns
+# TrueReturns
+# NullReturns
+
+# Removed obsolete/extended mutators
+# Math
+# ConditionalsBoundary
+# NegateConditionals
+
+PIT_MUTANT_OPS = ["Increments", "InvertNegs", "ReturnVals", "VoidMethodCall", "PrimitiveReturns", "ConstructorCall",
+                  "InlineConstant", "NonVoidMethodCall", "RemoveConditional", "ABS", "AOR", "AOD",
+                  "CRCR", "OBBN", "ROR", "UOI", "BooleanTrueReturnVals", "BooleanFalseReturnVals",
+                  "ArgumentPropagation",
                   "NullReturnVals", "NakedReceiver", "MemberVariable", "EmptyObjectReturnVals", "RemoveIncrements",
                   "Switch", "RemoveSwitch", "BigInteger"]
 
@@ -45,7 +56,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
 
     report_writer.writerow(["Bug-ID", "MAJOR fault-revealed", "MAJOR # revealing mutants", "MAJOR # mutants",
                             "PIT fault-revealed", "PIT # revealing mutants", "PIT # mutants",
-                            "Total # revealing mutants", "MAJOR Revealing Mutant Operators", "PIT Revealing Mutant Operators"])
+                            "Total # revealing mutants"])
 
     mutators_writer.writerow(["Bug-ID", "Mutation Tool"])
 
@@ -54,6 +65,8 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
         VID = line.split("-")[1]
 
         print(PID, VID)
+
+        # Setup file handles
 
         major_stats = major_dir + "/" + PID + "/" + VID + "/stats_MAJOR"
         major_reveal = major_dir + "/" + PID + "/" + VID + "/revealing_mutants_MAJOR"
@@ -78,9 +91,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
         major_revealed = False
         pit_revealed = False
 
-        pit_revealing_operators = ""
         pit_revealing_list = []
-        major_revealing_operators = ""
         major_revealing_list = []
 
         for row in major_stats_reader:
@@ -99,6 +110,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
                 if pit_revealing > 0:
                     pit_revealed = True
 
+        # Setup dicts
         mut_dict_major_revealing = {
             "AOR": 0,
             "LOR": 0,
@@ -114,17 +126,10 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
         mut_dict_major_no_coverage = dict(mut_dict_major_revealing)
 
         mut_dict_pit_revealing = {
-            "ConditionalsBoundary": 0,
             "Increments": 0,
             "InvertNegs": 0,
-            "Math": 0,
-            "NegateConditionals": 0,
             "ReturnVals": 0,
             "VoidMethodCall": 0,
-            "EmptyReturns": 0,
-            "FalseReturns": 0,
-            "TrueReturns": 0,
-            "NullReturns": 0,
             "PrimitiveReturns": 0,
             "ConstructorCall": 0,
             "InlineConstant": 0,
@@ -154,7 +159,6 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
 
         for row in major_reveal_reader:
             mut_op = row[0].split(":")[1]
-            major_revealing_operators += mut_op + "|"
             major_revealing_list += [mut_op]
             mut_dict_major_revealing[mut_op] += 1
 
@@ -166,33 +170,50 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
             mut_op = row[0].split(":")[1]
             mut_dict_major_no_coverage[mut_op] += 1
 
+        obsolete_mutants = 0
+        obsolete_revealing_mutants = 0
+
         for row in pit_reveal_reader:
             s = row[0].split(".")
             mut_op = s[len(s) - 1].split("-")[0]
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
-            pit_revealing_operators += mut_op_short + "|"
-            pit_revealing_list += [mut_op_short]
 
-            mut_dict_pit_revealing[mut_op_short] += 1
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+                pit_revealing_list += [mut_op_short]
+                mut_dict_pit_revealing[mut_op_short] += 1
+            else:
+                print("Obsolete Revealing " + mut_op + " -- " + mut_op_short)
+                obsolete_mutants += 1
+                obsolete_revealing_mutants += 1
 
         for row in pit_non_reveal_reader:
             s = row[0].split(".")
             mut_op = s[len(s) - 1].split("-")[0]
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
-            mut_dict_pit_non_revealing[mut_op_short] += 1
+
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+                mut_dict_pit_non_revealing[mut_op_short] += 1
+            else:
+                print("Obsolete " + mut_op + " -- " + mut_op_short)
+                obsolete_mutants += 1
 
         for row in pit_no_coverage_reader:
             s = row[0].split(".")
             mut_op = s[len(s) - 1].split("-")[0]
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
-            mut_dict_pit_no_coverage[mut_op_short] += 1
+
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+                mut_dict_pit_no_coverage[mut_op_short] += 1
+            else:
+                print("Obsolete " + mut_op + " -- " + mut_op_short)
+                obsolete_mutants += 1
 
         report_writer.writerow([PID + "-" + VID, major_revealed, major_revealing, major_total_mutants, pit_revealed,
-                                pit_revealing, pit_total_mutants, major_revealing + pit_revealing,
-                                major_revealing_operators, pit_revealing_operators])
+                                pit_revealing - obsolete_revealing_mutants, pit_total_mutants - obsolete_mutants,
+                                major_revealing + (pit_revealing - obsolete_revealing_mutants)])
         mutators_writer.writerow([PID + "-" + VID, "MAJOR"] + major_revealing_list)
         mutators_writer.writerow([PID + "-" + VID, "PIT"] + pit_revealing_list)
 
