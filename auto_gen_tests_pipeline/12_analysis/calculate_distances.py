@@ -46,8 +46,19 @@ with f_valid_bugs, f_dist_report:
         f_major_reveal = open(major_reveal, "r")
 
         for row in f_major_reveal:
+            # Remove quoted colons
+            # s = re.sub(r'(?!(([^"]*"){2})*[^"]*$):', '', row)
+
             mut_id = row.split(":")[0]
             line_number = row.split(":")[5]
+            try:
+                line_number = int(line_number)
+            except ValueError:
+                try:
+                    line_number = int(row.split(":")[6])
+                except ValueError:
+                    line_number = int(row.split(":")[7])
+
             # print(mut_id, line_number)
 
             try:
@@ -71,8 +82,19 @@ with f_valid_bugs, f_dist_report:
         f_major_non_reveal = open(major_non_reveal, "r")
 
         for row in f_major_non_reveal:
+            # Remove quoted colons
+            # s = re.sub(r'(?!(([^"]*"){2})*[^"]*$):', '', row)
+
             mut_id = row.split(":")[0]
             line_number = row.split(":")[5]
+            try:
+                line_number = int(line_number)
+            except ValueError:
+                try:
+                    line_number = int(row.split(":")[6])
+                except ValueError:
+                    line_number = int(row.split(":")[7])
+
             # print(mut_id, line_number)
 
             try:
