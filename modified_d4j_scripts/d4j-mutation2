@@ -184,7 +184,7 @@ if (defined $TEST_SUITE) {
 
 	    } catch {
 		print "Error, redirected to log files" . "\n";
-		system("echo $test >> /home/people/12309511/logs/major_mutation/methods/$proj-$gen-$seed-$version.log");
+		system("mkdir--parents /home/people/12309511/logging/6_major_mut_analysis/failed_methods; echo $test >> /home/people/12309511/logging/6_major_mut_analysis/failed_methods/$proj-$gen-$seed-$version.log");
 	    };
 	}
     }
@@ -227,7 +227,7 @@ sub GetTestMethodsFile {
         my @tar_split = split('-', $tar_file);
         my $version = $tar_split[1];
 	
-	my $file_location = "/home/people/12309511/all_tests/" . $project . "/" . $gen . "/" . $seed . "/" . $version ."/tests.txt";
+	my $file_location = "/home/people/12309511/all_test_methods/" . $project . "/" . $gen . "/" . $seed . "/" . $version ."/test_methods.txt";
 
 	return ($file_location, $project, $gen, $seed, $version);
 }

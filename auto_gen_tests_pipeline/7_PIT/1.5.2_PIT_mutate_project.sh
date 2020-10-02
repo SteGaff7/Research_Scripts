@@ -3,20 +3,21 @@
 projects=(
 	Chart
 	Cli
-	Closure
-	Codec
-	Compress
-	Csv
-	Gson
-	JacksonCore
-	JacksonDatabind
-	JacksonXml
-	Jsoup
-	JxPath
-	Lang
-	Math
-	Mockito
-	Time
+        Closure
+        Codec
+        Collections
+        Compress
+        Csv
+        Gson
+        JacksonCore
+        JacksonDatabind
+        JacksonXml
+        Jsoup
+        JxPath
+        Lang
+        Math
+        Mockito
+        Time
 )
 
 # Location of fixed test suites
@@ -61,10 +62,10 @@ for pid in "${projects[@]}"; do
 			                                echo ${pid}-${vid} >> "$valid_bugs_log"
                         			fi
 
-			                        job_name="${pid}-${gen}-${seed}-${vid}-PIT-mutation-1.5.2-full-run"
+			                        job_name="${pid}-${gen}-${seed}-${vid}-PIT-split-mutation-1.5.2"
 
                         			# Run mut HERE
-			                        sbatch --exclude=sonic37 -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out SBATCH_1.5.2_PIT_mutation.sh $pid $gen $seed $vid
+			                        sbatch -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out SBATCH_1.5.2_PIT_mutation.sh $pid $gen $seed $vid
 			          
 					else
                         			# Vid is not in trig test dir
