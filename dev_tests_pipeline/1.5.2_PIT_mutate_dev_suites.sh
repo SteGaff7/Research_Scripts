@@ -45,7 +45,7 @@ for project in "${projects[@]}"; do
 				job_name="${project}-dev-${bug_id}-PIT-mutation-1.5.2-Run2"
 
                                 # Run mut HERE
-                                sbatch --exclude=sonic37 -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out SBATCH_1.5.2_PIT_dev_mutation.sh $project $bug_id
+                                sbatch -J ${job_name} -o /dev/null -e ${tmp_log_dir}/${job_name}.out SBATCH_1.5.2_PIT_dev_mutation.sh $project $bug_id
                        fi
 
                 done < "$bugs_file"

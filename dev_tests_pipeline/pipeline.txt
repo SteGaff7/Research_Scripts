@@ -12,7 +12,4 @@ rel_test_methods --> dev/all_tests/pid/vid/all_test_methods
 
 Run mutation3 on pid vid which will use all test methods individually and ??move files to mut_analysis?
 
-Merge maps etc
-Check triggering
-
-Do these steps with the existing merge and check scripts? 
+PIT
