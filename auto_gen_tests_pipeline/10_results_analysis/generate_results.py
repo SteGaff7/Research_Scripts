@@ -1,7 +1,7 @@
 import csv
 import re
 
-f_valid_bugs = open("/home/people/12309511/scripts/auto_gen_tests_pipeline/12_analysis/valid_bugs", "r")
+f_valid_bugs = open("/home/people/12309511/scripts/auto_gen_tests_pipeline/10_results_analysis/valid_bugs", "r")
 f_report = open("/home/people/12309511/mutation_analysis/report.csv", "w")
 f_report_mutators = open("/home/people/12309511/mutation_analysis/mutators.csv", "w")
 f_major_mutators = open("/home/people/12309511/mutation_analysis/major_mutators.csv", "w")
@@ -22,9 +22,10 @@ MAJOR_MUTANT_OPS = ["AOR", "LOR", "COR", "ROR", "SOR", "ORU", "EVR", "LVR", "STD
 # Math
 # ConditionalsBoundary
 # NegateConditionals
+# InlineConstant
 
 PIT_MUTANT_OPS = ["Increments", "InvertNegs", "ReturnVals", "VoidMethodCall", "PrimitiveReturns", "ConstructorCall",
-                  "InlineConstant", "NonVoidMethodCall", "RemoveConditional", "ABS", "AOR", "AOD",
+                  "NonVoidMethodCall", "RemoveConditional", "ABS", "AOR", "AOD",
                   "CRCR", "OBBN", "ROR", "UOI", "BooleanTrueReturnVals", "BooleanFalseReturnVals",
                   "ArgumentPropagation",
                   "NullReturnVals", "NakedReceiver", "MemberVariable", "EmptyObjectReturnVals", "RemoveIncrements",
@@ -132,7 +133,6 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
             "VoidMethodCall": 0,
             "PrimitiveReturns": 0,
             "ConstructorCall": 0,
-            "InlineConstant": 0,
             "NonVoidMethodCall": 0,
             "RemoveConditional": 0,
             "ABS": 0,
@@ -179,7 +179,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
 
-            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals", "InlineConstant"]:
                 pit_revealing_list += [mut_op_short]
                 mut_dict_pit_revealing[mut_op_short] += 1
             else:
@@ -193,7 +193,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
 
-            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals", "InlineConstant"]:
                 mut_dict_pit_non_revealing[mut_op_short] += 1
             else:
                 print("Obsolete " + mut_op + " -- " + mut_op_short)
@@ -205,7 +205,7 @@ with f_valid_bugs, f_report, f_report_mutators, f_major_mutators, f_pit_mutators
             mut_op_short = mut_op.split("Mutator")[0]
             mut_op_short = re.sub(r'\d+', '', mut_op_short)
 
-            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals"]:
+            if mut_op_short not in ["Math", "ConditionalsBoundary", "NegateConditionals", "InlineConstant"]:
                 mut_dict_pit_no_coverage[mut_op_short] += 1
             else:
                 print("Obsolete " + mut_op + " -- " + mut_op_short)
