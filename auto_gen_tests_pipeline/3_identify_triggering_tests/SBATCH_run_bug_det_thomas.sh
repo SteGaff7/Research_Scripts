@@ -24,7 +24,7 @@ seed="$4"
 out_dir="/home/people/12309511/triggering_tests/${project}/${gen}/${seed}"
 mkdir -p ${out_dir}
 
-cmd="run_bug_detection_thomas.pl -p ${project} -d ${suite_dir} -o ${out_dir}/"
+cmd="run_triggering_test_identification.pl -p ${project} -d ${suite_dir} -o ${out_dir}/"
 
 echo $cmd
 

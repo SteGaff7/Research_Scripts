@@ -1,7 +1,7 @@
 import csv
 import re
 
-f_valid_bugs = open("/home/people/12309511/scripts/auto_gen_tests_pipeline/12_analysis/valid_bugs", "r")
+f_valid_bugs = open("/home/people/12309511/scripts/auto_gen_tests_pipeline/10_results_analysis/valid_bugs", "r")
 f_dist_report = open("/home/people/12309511/mutation_analysis/distances.csv", "w")
 
 major_dir = "/home/people/12309511/mutation_analysis/major"
@@ -124,7 +124,7 @@ with f_valid_bugs, f_dist_report:
         pit_reveal = pit_dir + "/" + PID + "/" + VID + "/revealing_mutants_PIT"
         f_pit_reveal = open(pit_reveal, "r")
 
-        obsolete_PIT_mutants = ["Math", "ConditionalsBoundary", "NegateConditionals"]
+        obsolete_PIT_mutants = ["Math", "ConditionalsBoundary", "NegateConditionals", "InlineConstant"]
 
         for row in f_pit_reveal:
             s = row.split(".")

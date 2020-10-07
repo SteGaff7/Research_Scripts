@@ -25,6 +25,6 @@ vid="$5"
 out_dir="/home/people/12309511/triggering_tests/${project}/${gen}/${seed}"
 mkdir -p ${out_dir}
 
-cmd="run_bug_detection_thomas.pl -p ${project} -v ${vid} -d ${suite_dir} -o ${out_dir}/"
+cmd="run_triggering_test_identification.pl -p ${project} -v ${vid} -d ${suite_dir} -o ${out_dir}/"
 
 eval "$cmd" || echo "$cmd" >> /home/people/12309511/logging/3_run_bug_det_thomas/failed_run_bug_by_vid.log
